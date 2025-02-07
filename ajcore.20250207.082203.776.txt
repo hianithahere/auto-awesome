@@ -1,0 +1,139 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.9.7 built on Thursday Jun 24, 2021 at 16:14:45 PDT
+---- Dump Properties ---
+Dump file: ajcore.20250207.082203.776.txt
+Dump reason: java.lang.ClassCircularityError
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+java.lang.ClassCircularityError: java/lang/Module$ReflectionData
+	at java.base/java.lang.Module.isReflectivelyExportedOrOpen(Module.java:766)
+	at java.base/java.lang.Module.implIsExportedOrOpen(Module.java:712)
+	at java.base/java.lang.Module.isExported(Module.java:651)
+	at java.base/sun.invoke.util.VerifyAccess.isClassAccessible(VerifyAccess.java:213)
+	at java.base/java.lang.invoke.MethodHandles$Lookup.isClassAccessible(MethodHandles.java:3810)
+	at java.base/java.lang.invoke.MethodHandles$Lookup.resolveOrNull(MethodHandles.java:3776)
+	at java.base/java.lang.invoke.MethodHandles$Lookup.canBeCached(MethodHandles.java:4310)
+	at java.base/java.lang.invoke.MethodHandles$Lookup.linkMethodHandleConstant(MethodHandles.java:4276)
+	at java.base/java.lang.invoke.MethodHandleNatives.linkMethodHandleConstant(MethodHandleNatives.java:628)
+	at java.base/sun.net.www.protocol.jrt.JavaRuntimeURLConnection.<clinit>(JavaRuntimeURLConnection.java:56)
+	at java.base/sun.net.www.protocol.jrt.Handler.openConnection(Handler.java:42)
+	at java.base/java.net.URL.openConnection(URL.java:1258)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:661)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:150)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:862)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:326)
+	at java.xml/javax.xml.parsers.SAXParser.parse(SAXParser.java:276)
+	at java.xml/javax.xml.catalog.CatalogImpl.parse(CatalogImpl.java:295)
+	at java.xml/javax.xml.catalog.CatalogImpl.load(CatalogImpl.java:171)
+	at java.xml/javax.xml.catalog.CatalogManager.catalog(CatalogManager.java:73)
+	at java.xml/jdk.xml.internal.JdkCatalog.init(JdkCatalog.java:43)
+	at java.xml/jdk.xml.internal.XMLSecurityManager.prepareCatalog(XMLSecurityManager.java:305)
+	at java.xml/jdk.xml.internal.XMLSecurityManager.<init>(XMLSecurityManager.java:290)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl.<init>(SAXParserFactoryImpl.java:72)
+	at java.xml/jdk.xml.internal.JdkXmlUtils.getSAXFactory(JdkXmlUtils.java:441)
+	at java.xml/jdk.xml.internal.JdkXmlUtils.<clinit>(JdkXmlUtils.java:97)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ParserConfigurationSettings.<init>(ParserConfigurationSettings.java:102)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.<init>(XML11Configuration.java:485)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XIncludeAwareParserConfiguration.<init>(XIncludeAwareParserConfiguration.java:136)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XIncludeAwareParserConfiguration.<init>(XIncludeAwareParserConfiguration.java:93)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.SAXParser.<init>(SAXParser.java:121)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.SAXParser.<init>(SAXParser.java:101)
+	at java.xml/org.xml.sax.helpers.XMLReaderFactory.createXMLReader(XMLReaderFactory.java:152)
+	at org.aspectj.weaver.loadtime.definition.DocumentParser.getXMLReader(DocumentParser.java:165)
+	at org.aspectj.weaver.loadtime.definition.DocumentParser.saxParsing(DocumentParser.java:135)
+	at org.aspectj.weaver.loadtime.definition.DocumentParser.parse(DocumentParser.java:122)
+	at org.aspectj.weaver.loadtime.ClassLoaderWeavingAdaptor.parseDefinitions(ClassLoaderWeavingAdaptor.java:288)
+	at org.aspectj.weaver.loadtime.DefaultWeavingContext.getDefinitions(DefaultWeavingContext.java:130)
+	at org.aspectj.weaver.loadtime.ClassLoaderWeavingAdaptor.initialize(ClassLoaderWeavingAdaptor.java:173)
+	at org.aspectj.weaver.loadtime.Aj$ExplicitlyInitializedClassLoaderWeavingAdaptor.initialize(Aj.java:334)
+	at org.aspectj.weaver.loadtime.Aj$ExplicitlyInitializedClassLoaderWeavingAdaptor.getWeavingAdaptor(Aj.java:339)
+	at org.aspectj.weaver.loadtime.Aj$WeaverContainer.getWeaver(Aj.java:313)
+	at org.aspectj.weaver.loadtime.Aj.preProcess(Aj.java:107)
+	at org.aspectj.weaver.loadtime.ClassPreProcessorAgentAdapter.transform(ClassPreProcessorAgentAdapter.java:51)
+	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:242)
+	at java.instrument/sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at java.instrument/sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:610)
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1026)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528)
+	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:504)
+	at java.instrument/sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:572)
+---- System Properties ---
+java.specification.version=23
+sun.cpu.isalist=amd64
+sun.jnu.encoding=Cp1252
+java.class.path=C:\Users\Anitha\AppData\Local\JetBrains\IntelliJ IDEA 2024.3.2.2\lib\idea_rt.jar;C:\Users\Anitha\AppData\Local\JetBrains\IntelliJ IDEA 2024.3.2.2\plugins\testng\lib\testng-rt.jar;C:\Users\Anitha\IdeaProjects\auto-awesome\target\test-classes;C:\Users\Anitha\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\Anitha\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\Anitha\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\Anitha\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\Anitha\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\Anitha\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\Anitha\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\Anitha\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\Anitha\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\Anitha\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\Anitha\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\Anitha\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\Anitha\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\Anitha\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\Anitha\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\Anitha\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\Anitha\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\Anitha\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\Anitha\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\Anitha\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\Anitha\.m2\repository\io\qameta\allure\allure-testng\2.14.0\allure-testng-2.14.0.jar;C:\Users\Anitha\.m2\repository\io\qameta\allure\allure-java-commons\2.14.0\allure-java-commons-2.14.0.jar;C:\Users\Anitha\.m2\repository\io\qameta\allure\allure-model\2.14.0\allure-model-2.14.0.jar;C:\Users\Anitha\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.3\jackson-databind-2.12.3.jar;C:\Users\Anitha\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.3\jackson-annotations-2.12.3.jar;C:\Users\Anitha\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.3\jackson-core-2.12.3.jar;C:\Users\Anitha\.m2\repository\org\apache\tika\tika-core\1.26\tika-core-1.26.jar;C:\Users\Anitha\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Anitha\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Anitha\.m2\repository\javax\activation\activation\1.1.1\activation-1.1.1.jar;C:\Users\Anitha\.m2\repository\org\jooq\joor-java-8\0.9.14\joor-java-8-0.9.14.jar;C:\Users\Anitha\.m2\repository\io\qameta\allure\allure-test-filter\2.14.0\allure-test-filter-2.14.0.jar;C:\Users\Anitha\.m2\repository\io\github\bonigarcia\webdrivermanager\4.4.3\webdrivermanager-4.4.3.jar;C:\Users\Anitha\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\Anitha\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;C:\Users\Anitha\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\Anitha\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\Anitha\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.3\httpclient5-5.0.3.jar;C:\Users\Anitha\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.2\httpcore5-5.0.2.jar;C:\Users\Anitha\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0.2\httpcore5-h2-5.0.2.jar;C:\Users\Anitha\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\Anitha\.m2\repository\org\rauschig\jarchivelib\1.1.0\jarchivelib-1.1.0.jar;C:\Users\Anitha\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\Anitha\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\Anitha\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\Anitha\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\Anitha\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\Anitha\.m2\repository\org\slf4j\slf4j-simple\1.7.30\slf4j-simple-1.7.30.jar;C:\Users\Anitha\.m2\repository\org\junit\jupiter\junit-jupiter\5.12.0-M1\junit-jupiter-5.12.0-M1.jar;C:\Users\Anitha\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.12.0-M1\junit-jupiter-api-5.12.0-M1.jar;C:\Users\Anitha\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Anitha\.m2\repository\org\junit\platform\junit-platform-commons\1.12.0-M1\junit-platform-commons-1.12.0-M1.jar;C:\Users\Anitha\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Anitha\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.12.0-M1\junit-jupiter-params-5.12.0-M1.jar;C:\Users\Anitha\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.12.0-M1\junit-jupiter-engine-5.12.0-M1.jar;C:\Users\Anitha\.m2\repository\org\junit\platform\junit-platform-engine\1.12.0-M1\junit-platform-engine-1.12.0-M1.jar
+java.vm.vendor=Oracle Corporation
+kotlinx.coroutines.debug.enable.mutable.state.flows.stack.trace=true
+sun.arch.data.model=64
+idea.test.cyclic.buffer.size=1048576
+user.variant=
+java.vendor.url=https://java.oracle.com/
+user.timezone=America/Phoenix
+java.vm.specification.version=23
+os.name=Windows 11
+sun.java.launcher=SUN_STANDARD
+user.country=US
+sun.boot.library.path=C:\Users\Anitha\.jdks\openjdk-23.0.2\bin
+sun.java.command=com.intellij.rt.testng.RemoteTestNGStarter -usedefaultlisteners false -socket52076 @w@C:\Users\Anitha\AppData\Local\Temp\idea_working_dirs_testng.tmp -temp C:\Users\Anitha\AppData\Local\Temp\idea_testng.tmp
+jdk.debug=release
+sun.cpu.endian=little
+user.home=C:\Users\Anitha
+user.language=en
+sun.stderr.encoding=UTF-8
+java.specification.vendor=Oracle Corporation
+java.version.date=2025-01-21
+java.home=C:\Users\Anitha\.jdks\openjdk-23.0.2
+file.separator=\
+java.vm.compressedOopsMode=Zero based
+sun.stdout.encoding=UTF-8
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+java.specification.name=Java Platform API Specification
+user.script=
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.runtime.version=23.0.2+7-58
+user.name=Anitha
+stdout.encoding=UTF-8
+path.separator=;
+kotlinx.coroutines.debug.enable.creation.stack.trace=false
+os.version=10.0
+java.runtime.name=OpenJDK Runtime Environment
+file.encoding=UTF-8
+java.vm.name=OpenJDK 64-Bit Server VM
+java.vendor.url.bug=https://bugreport.java.com/bugreport/
+java.io.tmpdir=C:\Users\Anitha\AppData\Local\Temp\
+java.version=23.0.2
+user.dir=C:\Users\Anitha\IdeaProjects\auto-awesome
+os.arch=amd64
+java.vm.specification.name=Java Virtual Machine Specification
+sun.os.patch.level=
+native.encoding=Cp1252
+kotlinx.coroutines.debug.enable.flows.stack.trace=true
+java.library.path=C:\Users\Anitha\.jdks\openjdk-23.0.2\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\Anitha\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Anitha\AppData\Local\Programs\Python\Python313\;C:\Users\Anitha\AppData\Local\Programs\Python\Launcher\;C:\Users\Anitha\AppData\Local\Microsoft\WindowsApps;C:\Program Files\curl\bin;C:\Program Files\Git\cmd;C:\Users\Anitha\Downloads\apache-maven-3.9.9-bin.tar.gz\apache-maven-3.9.9\bin;C:\Users\Anitha\AppData\Local\GitHubDesktop\bin;C:\Users\Anitha\Downloads\apache-maven-3.9.9-bin.tar.gz\apache-maven-3.9.9\bin;C:\Users\Anitha\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Anitha\AppData\Local\Programs\Python\Python313\;C:\Users\Anitha\AppData\Local\Programs\Python\Launcher\;C:\Users\Anitha\AppData\Local\Microsoft\WindowsApps;C:\Users\Anitha\AppData\Local\GitHubDesktop\bin;.
+java.vm.info=mixed mode, sharing
+stderr.encoding=UTF-8
+java.vendor=Oracle Corporation
+java.vm.version=23.0.2+7-58
+java.rmi.server.randomIDs=true
+sun.io.unicode.encoding=UnicodeLittle
+debugger.agent.enable.coroutines=true
+java.class.version=67.0
+---- Command Line ---
+Empty
+---- Full Classpath ---
+Empty
+---- Compiler Messages ---
+Empty

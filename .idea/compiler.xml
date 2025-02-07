@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="auto-awesome" />
+        <module name="demo1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
